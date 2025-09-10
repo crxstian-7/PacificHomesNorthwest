@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Text Website</title>
+    <title>Pacific Homes Northwest</title>
     <style>
         body {
             margin: 0;
@@ -33,15 +33,152 @@
             color: #666;
             font-size: 1.1rem;
             line-height: 1.6;
+            margin: 0.5rem 0;
+        }
+
+        .screening-section {
+            margin: 0.5rem 0;
+        }
+
+        .screening-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .screening-header:hover {
+            color: #333;
+        }
+
+        .dropdown-arrow {
+            transition: transform 0.3s ease;
+            font-size: 0.8rem;
+            order: -1; /* This moves the arrow to the left */
+        }
+
+        .dropdown-arrow.rotated {
+            transform: rotate(90deg);
+        }
+
+        .screening-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            margin-top: 10px;
+            position: absolute;
+            left: 2rem;
+            right: 2rem;
+            z-index: 10;
+        }
+
+        .screening-details.expanded {
+            max-height: 500px;
+            padding: 1rem;
+        }
+
+        .screening-details p {
+            text-align: left;
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .screening-details ul {
+            text-align: left;
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .screening-details li {
+            margin: 0.3rem 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .content-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 12px;
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h3>Welcome to Our Website</h3>
+        <h3>Pacific Homes Northwest</h3>
         <div class="content-text">
-            This is some sample text that appears centered on the page. The text is aligned in the center and positioned underneath the heading above. This layout creates a clean and simple design that's perfect for displaying important information or messages to your visitors.
+            <a href="mailto:pacifichomesnorthwest@gmail.com?subject=Maintenance Request for 537 NE 99th Ave">Submit a maintenance request</a>
+        </div>
+        <div class="screening-section">
+            <div class="screening-header" onclick="toggleScreeningDetails()">
+                <span class="dropdown-arrow" id="arrow">▶</span>
+                <span>Screening Criteria</span>
+            </div>
+            <div class="screening-details" id="screeningDetails">
+                <p><strong>Application Requirements:</strong></p>
+                <ul>
+                    <li>Completed rental application with all required information</li>
+                    <li>Valid government-issued photo ID</li>
+                    <li>Proof of income (pay stubs, employment letter, or tax returns)</li>
+                    <li>Banking information and statements</li>
+                </ul>
+                
+                <p><strong>Income Requirements:</strong></p>
+                <ul>
+                    <li>Monthly gross income must be at least 3x the monthly rent</li>
+                    <li>Stable employment history (minimum 6 months current position)</li>
+                    <li>Verifiable income sources</li>
+                </ul>
+                
+                <p><strong>Credit & Background:</strong></p>
+                <ul>
+                    <li>Credit score of 650 or higher preferred</li>
+                    <li>Background check with no violent criminal history</li>
+                    <li>No recent evictions or landlord disputes</li>
+                </ul>
+                
+                <p><strong>References:</strong></p>
+                <ul>
+                    <li>Previous landlord references (if applicable)</li>
+                    <li>Personal references</li>
+                    <li>Employment verification</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-text">
+            <a href="https://venmo.com/">Make a payment</a> 
+        </div>
+        <div class="content-text">
+            <a href="mailto:pacifichomesnorthwest@gmail.com?subject=Other Inquiries for 537 NE 99th Ave">For other inquiries</a>
         </div>
     </div>
+
+    <div class="content-bottom">
+        The information provided on this website does not, and is not intended to, constitute legal advice; instead, all information, content, and materials available on this site are for general informational and entertainment purposes only. Information on this website may not constitute the most up-to-date legal or other information. This website contains links to other third-party websites. Such links are only for the convenience of the reader, user or browser; Pacific Homes Northwest does not recommend or endorse the contents of the third-party sites. Readers of this website should contact their attorney to obtain advice with respect to any particular legal matter. No reader, user, or browser of this site should act or refrain from acting on the basis of information on this site without first seeking legal advice from counsel in the relevant jurisdiction. Only your individual attorney can provide assurances that the information contained herein – and your interpretation of it – is applicable or appropriate to your particular situation. Use of, and access to, this website or any of the links or resources contained within the site do not create an agent-client relationship between the reader, user, or browser and website authors, contributors, or Pacific Homes Northwest. All liability with respect to actions taken or not taken based on the contents of this site are hereby expressly disclaimed. The content on this website is provided "as is;" no representations are made that the content is error-free.
+    </div>
+
+    <script>
+        function toggleScreeningDetails() {
+            const details = document.getElementById('screeningDetails');
+            const arrow = document.getElementById('arrow');
+            
+            details.classList.toggle('expanded');
+            arrow.classList.toggle('rotated');
+        }
+    </script>
 </body>
 </html>
