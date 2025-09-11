@@ -5,60 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pacific Homes Northwest</title>
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            box-sizing: border-box;
         }
 
-        .container {
-            text-align: center;
-            max-width: 600px;
-            padding: 2rem;
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+            padding: 8rem 4rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         h3 {
-            color: #333;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            font-size: 2rem;
+            font-weight: 300;
+            
+            color: #000;
         }
 
+        
+
         .content-text {
-            color: #666;
-            font-size: 1.1rem;
-            line-height: 1.6;
             margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+
+        .content-text a {
+            color: #000;
+            text-decoration: underline;
         }
 
         .screening-section {
-            margin: 0.5rem 0;
+            margin-top: 3rem;
         }
 
         .screening-header {
+            font-size: 1rem;
+            cursor: pointer;
+            margin-bottom: 0;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 10px;
-            cursor: pointer;
-            color: #666;
-            font-size: 1.1rem;
-            line-height: 1.6;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            user-select: none;
         }
 
         .screening-header:hover {
-            color: #333;
+            background-color: #f8f8f8;
+            margin: 0 -1rem;
+            padding: 1rem;
+            border-radius: 4px;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .dropdown-arrow {
-            transition: transform 0.3s ease;
+            margin-right: 1rem;
+            transition: transform 0.2s ease;
             font-size: 0.8rem;
-            order: -1; /* This moves the arrow to the left */
+            color: #666;
         }
 
         .dropdown-arrow.rotated {
@@ -69,156 +79,190 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            margin-top: 10px;
-            position: absolute;
-            left: 2rem;
-            right: 2rem;
-            z-index: 10;
         }
 
         .screening-details.expanded {
-            max-height: 500px;
-            padding: 1rem;
+            max-height: 2000px;
         }
 
-        .screening-details p {
-            text-align: left;
-            margin: 0.5rem 0;
-            font-size: 0.95rem;
-            color: #555;
+        .screening-content {
+            padding: 1rem 0;
         }
 
-        .screening-details ul {
-            text-align: left;
-            margin: 0.5rem 0;
-            padding-left: 1.5rem;
+        .screening-content h4 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: #000;
         }
 
-        .screening-details li {
-            margin: 0.3rem 0;
-            font-size: 0.95rem;
-            color: #555;
+        .screening-content h5 {
+            font-size: 1rem;
+            font-weight: 400;
+            margin: 2rem 0 1rem 0;
+            color: #000;
+        }
+
+        .screening-content p {
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .resources-content {
+            padding: 2rem 0;
+        }
+
+        .resources-content a {
+            display: block;
+            color: #000;
+            text-decoration: underline;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .resources-content a:hover {
+            color: #333;
         }
 
         .content-bottom {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            background-color: #333;
-            color: white;
-            padding: 1rem 0;
+            margin-top: 10rem;
+            padding: 4rem 0 2rem 0;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.8rem;
+            color: #666;
             text-align: center;
-            font-size: 12px;
-            box-sizing: border-box;
+            line-height: 1.6;
         }
+
+        .center-image {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.center-image img {
+    max-width: 200px;
+    height: auto;
+    
+}
     </style>
 </head>
 <body>
-    <div class="container">
-        <h3>Pacific Homes Northwest</h3>
-        <div class="content-text">
-            <a href="mailto:pacifichomesnorthwest@gmail.com?subject=Maintenance Request for 537 NE 99th Ave">Submit a maintenance request</a>
+    <h3>Pacific Homes Northwest</h3>
+
+    <div class="content-text">
+        <a href="https://www.apartments.com/apply-online/?token=xcpms8p&l=lxcft3d&u=2slws78&landlordInvite=true">Apply Online</a>
+    </div>
+    
+    <div class="content-text">
+        <a href="mailto:pacifichomesnorthwest@gmail.com?subject=Maintenance Request for 537 NE 99th Ave">Submit a maintenance request</a>
+    </div>
+    
+    <div class="content-text">
+        <a href="https://venmo.com/">Make a payment</a> 
+    </div>
+    
+    <div class="content-text">
+        <a href="mailto:pacifichomesnorthwest@gmail.com?subject=Other Inquiries for 537 NE 99th Ave">For other inquiries</a>
+    </div>
+    
+    <div class="screening-section">
+        <div class="screening-header" onclick="toggleDropdown('screeningDetails', 'screeningArrow')">
+            <span class="dropdown-arrow" id="screeningArrow">▶</span>
+            <span>Application Process and Screening Criteria</span>
         </div>
-        <div class="screening-section">
-            <div class="screening-header" onclick="toggleScreeningDetails()">
-                <span class="dropdown-arrow" id="arrow">▶</span>
-                <span>Screening Criteria</span>
-            </div>
-            <div class="screening-details" id="screeningDetails">
-                <p>APPLICATION PROCESS AND SCREENING CRITERIA 
+        <div class="screening-details" id="screeningDetails">
+            <div class="screening-content">
+                <h4>Application Process and Screening Criteria</h4>
+                
+                <h5>General Process</h5>
+                <li>We offer an application form to everyone</li>
+                <p>We review only fully completed applications in the order received</p>
+                <p>We may require up to 5 business days to verify information</p>
+                <p>We screen: Financial Background, Criminal Background, Prior Rental History, References</p>
 
-* We offer an application form to everyone. 
+                <h5>Complete Application</h5>
+                <p>Each applicant over 18 must submit an individual application via our website</p>
+                <p>We will not review incomplete applications</p>
+                <p>Must present government issued photo identification</p>
+                <p>We will accept the first qualified applicant(s)</p>
 
-* We review only fully completed applications in the order in which we receive them. 
+                <h5>Financial Background</h5>
+                <p>Household income must be at least 2.5x monthly rent (non-Portland) or 2-2.5x in Portland</p>
+                <p>Co-signers may be required (subject to individual approval)</p>
+                <p>Income must be verifiable through pay stubs, employer contact, award letters, tax records, or bank statements</p>
+                <p>May require credit report obtained within past 30 days</p>
+                <p>Negative credit (late payments, collections, judgments, bankruptcy) may result in denial</p>
 
-* We may require up to 5 business days to verify information on any application. 
+                <h5>Criminal Background</h5>
+                <p>Will be denied for convictions including: drug-related crimes, person crimes, sex offenses, financial fraud</p>
+                <p>Effective 1/1/2020: Cannot consider marijuana use/possession or medical marijuana status</p>
 
-* We screen the following: Financial Background, Criminal Background, Prior Rental History, References.  
+                <h5>Prior Rental History</h5>
+                <p>No evictions within past five years</p>
+                <p>Must provide information to contact past landlords</p>
 
-Complete Application 
+                <h5>References</h5>
+                <p>Favorable references from current employers, past landlords, and other relevant persons</p>
 
-* Each applicant over the age of 18 must submit an individual application via our website. 
+                <h5>Explanations/Exceptions</h5>
+                <p>Written explanations for extenuating circumstances may be submitted</p>
+                <p>Exceptions may be made with increased deposits or qualified co-signers</p>
+                <p>Falsification or misrepresentation will result in denial</p>
 
-* We will not review incomplete applications. Application is complete when all the tenants and co-signers have submitted their individual applications. 
-
-* Applicants must present a piece of government issued identification with a photograph. 
-
-* We will accept the first qualified applicant(s). 
-
-Financial Background 
-
-* Household income shall be at least 2.5 times the monthly rent (non-Portland), or 2 or 2.5 times the monthly income in Portland (excluding utilities).  
-
-* If a co-signer is necessary, the co-signer must also complete and sign an application. The acceptance of a co-signer is not a normal policy and is subject to individual approval or denial by Pacific Homes Northwest. 
-
-* Income must be verifiable through pay stubs or employer contact; award letters for Social Security, alimony, child support, welfare, utility or housing assistance; current tax records; or bank statements. 
-
-* We may require you to submit a copy of your credit report obtained within the past 30 days. 
-
-* Negative credit reports may result in denial of application. Negative reports include, but are not limited to: late payments, collections, judgments, total debt load, and bankruptcy. 
-
-Criminal Background 
-
-* Applicants will be denied for criminal convictions or pending charges that include but are not limited to: drug-related crimes, person crimes, sex offenses, any crimes involving financial fraud (including identity theft or forgery), or any other crime that would adversely impact the health, safety or right of peaceful enjoyment of the premises of the residents, landlord or landlords agent. 
-
-    * Effective 1/1/2020, landlords are subject to the following changes in screening guidelines: 1.  When evaluating an applicant, the landlord may not consider drug-related convictions based solely on the use or possession of marijuana. .2  When evaluating an applicant, the landlord may not consider the possession of a medical marijuana card or status as a medical marijuana patient when making a determination about the suitability of an applicant. Affordable housing providers subject to federal laws prohibiting the use or possession of marijuana (including medical marijuana) by residents on the premises may continue to enforce those rules with their residents. 
-
-Prior Rental History 
-
-* No evictions within the past five years. We do not consider evictions which took place five years or more ago, nor do we consider evictions which resulted in a dismissal or a general judgment for the applicant. 
-
-* Applicants must provide the information necessary to contact past landlords. 
-
-References 
-
-* Favorable references from current employers, past landlords and other relevant persons. 
-
-Explanations/Exceptions 
-
-* All applicants may submit a written explanation with their application if there are extenuating circumstances which require additional consideration. 
-
-* If, after making a good faith effort, we are unable to verify information on your application, or if you fail to pass any of the screening criteria, the application process will be terminated. 
-
-* Exceptions may be made for applicants with increased deposits or qualified co-signers at the sole discretion of the Owner/Agent. 
-
-* Applicants may be rejected based on the demeanor in which they treat the Owner/Agent or other parties present. 
-
-* Falsification or misrepresentation of any part of the application will result in denial 
-
-Liability Insurance Requirements and Options: 
-
-The Landlord requires Tenant to obtain liability coverage of at least $100,000 in property damage and personal liability from an A-rated carrier and to maintain such coverage throughout the entire term of the lease agreement. Tenant is required to furnish Landlord evidence of the required insurance prior to occupancy, at the time of each lease renewal period, and upon request. 
-
-To satisfy the insurance requirement, Tenant finds, purchase, and maintain Tenants policy that satisfies the Landlords coverage requirements. Tenant must provide evidence of the required insurance coverage by the Lease commencement date. 
-
-Please be sure that your policy meets the following criteria prior to submitting: 
-
-Policy is purchased from an A- rated carrier Policy meets or exceeds the required $100,000 in property damage and personal liability
- </p>
+                <h5>Liability Insurance Requirements</h5>
+                <p>Required: $100,000 coverage in property damage and personal liability</p>
+                <p>Must be from an A-rated carrier</p>
+                <p>Evidence required prior to occupancy and at lease renewal</p>
             </div>
         </div>
-        <div class="content-text">
-            <a href="https://venmo.com/">Make a payment</a> 
+    </div>
+
+    <div class="screening-section-two">
+        <div class="screening-header" onclick="toggleDropdown('resourcesDetails', 'resourcesArrow')">
+            <span class="dropdown-arrow" id="resourcesArrow">▶</span>
+            <span>Downloadable Resources</span>
         </div>
-        <div class="content-text">
-            <a href="mailto:pacifichomesnorthwest@gmail.com?subject=Other Inquiries for 537 NE 99th Ave">For other inquiries</a>
-        </div>
+        <div class="screening-details" id="resourcesDetails">
+            <div class="resources-content">
+                <a href="https://longstreetpropertymanagement.com/wp-content/uploads/2021/04/notice-30.01.087.c.1-depreciation-schedule.pdf">Fixture, Appliance, Equipment, and Personal Property Depreciation Schedule</a>
+                <a href="https://longstreetpropertymanagement.com/wp-content/uploads/2021/04/table-30.01.086.d.2.a-b.pdf">Rental Housing Application and Screening Minimum Income Requirement</a>
+                <a href="https://longstreetpropertymanagement.com/wp-content/uploads/2021/04/notice30.01.086.c.3.bmodificationoraccommodation_2021.pdf">Right to Request a Modification or Accommodation Notice</a>
             </div>
+        </div>
+    </div>
+
+    <div class="screening-section-three">
+        <div class="screening-header" onclick="toggleDropdown('resourcesDetails-three', 'resourcesArrow-three')">
+            <span class="dropdown-arrow" id="resourcesArrow-three">▶</span>
+            <span>How to Apply</span>
+        </div>
+        <div class="screening-details" id="resourcesDetails-three">
+            <div class="resources-content">
+                <p>Step 1: Click the Appy Online hyperlink</p>
+                <p>Step 2: If your application meets the application process and screening criteria, a rental agreement will be provided</p>
+                <p>Step 3: After the rental agreement is completed and signed, your keys will be provided.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="center-image">
+    <img src="equal.jpg" alt="Equal Housing Opportunity">
+    </div>
+
+        <div class="content-bottom">
+                The information provided on this website does not, and is not intended to, constitute legal advice; instead, all information, content, and materials available on this site are for general informational and entertainment purposes only. Information on this website may not constitute the most up-to-date legal or other information. This website contains links to other third-party websites. Such links are only for the convenience of the reader, user or browser; Pacific Homes Northwest does not recommend or endorse the contents of the third-party sites. Readers of this website should contact their attorney to obtain advice with respect to any particular legal matter. No reader, user, or browser of this site should act or refrain from acting on the basis of information on this site without first seeking legal advice from counsel in the relevant jurisdiction. Only your individual attorney can provide assurances that the information contained herein – and your interpretation of it – is applicable or appropriate to your particular situation. Use of, and access to, this website or any of the links or resources contained within the site do not create an agent-client relationship between the reader, user, or browser and website authors, contributors, or Pacific Homes Northwest. All liability with respect to actions taken or not taken based on the contents of this site are hereby expressly disclaimed. The content on this website is provided "as is;" no representations are made that the content is error-free.
+            </div>
+
     <script>
-        function toggleScreeningDetails() {
-            const details = document.getElementById('screeningDetails');
-            const arrow = document.getElementById('arrow');
+        function toggleDropdown(detailsId, arrowId) {
+            const details = document.getElementById(detailsId);
+            const arrow = document.getElementById(arrowId);
             
             details.classList.toggle('expanded');
             arrow.classList.toggle('rotated');
         }
     </script>
-    <div class="content-bottom">
-                The information provided on this website does not, and is not intended to, constitute legal advice; instead, all information, content, and materials available on this site are for general informational and entertainment purposes only. Information on this website may not constitute the most up-to-date legal or other information. This website contains links to other third-party websites. Such links are only for the convenience of the reader, user or browser; Pacific Homes Northwest does not recommend or endorse the contents of the third-party sites. Readers of this website should contact their attorney to obtain advice with respect to any particular legal matter. No reader, user, or browser of this site should act or refrain from acting on the basis of information on this site without first seeking legal advice from counsel in the relevant jurisdiction. Only your individual attorney can provide assurances that the information contained herein – and your interpretation of it – is applicable or appropriate to your particular situation. Use of, and access to, this website or any of the links or resources contained within the site do not create an agent-client relationship between the reader, user, or browser and website authors, contributors, or Pacific Homes Northwest. All liability with respect to actions taken or not taken based on the contents of this site are hereby expressly disclaimed. The content on this website is provided "as is;" no representations are made that the content is error-free.
-            </div>
 </body>
 </html>
